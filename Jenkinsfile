@@ -1,6 +1,6 @@
 node{
  stage("git checkout"){
-  git 'https://github.com/nourinb/javaparser-maven-sample/new/master'
+  git credentialsId: 'webservergithubapikey', url: 'https://github.com/nourinb/javaparser-maven-sample'
   }
   stage("compile"){
   sh 'mvn package'
